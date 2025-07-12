@@ -15,6 +15,69 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'Open Sans', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              'stevinova-peach': {
+                50: '#fff7f0',
+                100: '#ffe0c7',
+                200: '#ffc299',
+                300: '#ffad7a',
+                400: '#ff9652',
+                500: '#ff7e29',
+                600: '#e66e1f',
+                700: '#b35317',
+                800: '#80400f',
+                900: '#4d2607',
+              },
+              'stevinova-mint': {
+                50: '#f0fff7',
+                100: '#c7ffe0',
+                200: '#99ffc2',
+                300: '#7affad',
+                400: '#52ff96',
+                500: '#29ff7e',
+                600: '#1fe66e',
+                700: '#17b353',
+                800: '#0f8040',
+                900: '#074d26',
+              },
+              'stevinova-lavender': {
+                50: '#f7f0ff',
+                100: '#e0c7ff',
+                200: '#c299ff',
+                300: '#ad7aff',
+                400: '#9652ff',
+                500: '#7e29ff',
+                600: '#6e1fe6',
+                700: '#5317b3',
+                800: '#400f80',
+                900: '#26074d',
+              },
+              'stevinova-sky': {
+                50: '#f0f7ff',
+                100: '#c7e0ff',
+                200: '#99c2ff',
+                300: '#7aadff',
+                400: '#5296ff',
+                500: '#297eff',
+                600: '#1f6ee6',
+                700: '#1753b3',
+                800: '#0f4080',
+                900: '#07264d',
+              },
+            },
+          },
+        },
+      }
+    </script>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,7 +87,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Stevinova - Senior Care Technology Platform</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
