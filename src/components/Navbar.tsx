@@ -87,6 +87,8 @@ const Navbar: React.FC = () => (
         <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('shopping')}>Shopping</Button>
         <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('games')}>Games</Button>
         <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('family')}>Family</Button>
+        <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('entertainment-channel')}>Entertainment</Button>
+        <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('kindpaws')}>KindPaws™</Button>
         <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('pricing')}>Pricing</Button>
         <Button color="inherit" sx={{ fontWeight: 500, fontSize: 15, textTransform: 'none', color: '#fff', px: 1 }} onClick={() => scrollToSection('how-it-works')}>How It Works</Button>
         <Button variant="contained" color="secondary" sx={{ fontWeight: 700, fontSize: 15, borderRadius: 2, ml: 2, px: 3, boxShadow: 2, bgcolor: '#4ade80', color: '#000', '&:hover': { bgcolor: '#86efac', transform: 'translateY(-2px)' } }}>

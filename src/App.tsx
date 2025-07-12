@@ -6,6 +6,8 @@ import FeaturesSection from './components/FeaturesSection';
 import ShoppingShowcase from './components/ShoppingShowcase';
 import GamesSection from './components/GamesSection';
 import FamilyEngagementCenter from './components/FamilyEngagementCenter';
+import EntertainmentChannel from './components/EntertainmentChannel';
+import KindPawsSection from './components/KindPawsSection';
 import PricingSection from './components/PricingSection';
 import HowItWorksSection from './components/HowItWorksSection';
 
@@ -46,11 +48,13 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar />
-      <HeroSection />
       <FeaturesSection />
+      <HeroSection />
       <ShoppingShowcase />
       <GamesSection />
       <FamilyEngagementCenter />
+      <EntertainmentChannel />
+      <KindPawsSection />
       <PricingSection />
       <HowItWorksSection />
       {/* Add more sections here as you refactor them to the new style */}

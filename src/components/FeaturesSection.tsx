@@ -9,7 +9,9 @@ import {
   faGamepad, 
   faUsers, 
   faBrain, 
-  faHeart 
+  faHeart,
+  faTv,
+  faPaw
 } from '@fortawesome/free-solid-svg-icons';
 
 const features = [
@@ -18,7 +20,7 @@ const features = [
     title: 'Smart Shopping',
     desc: 'Complete product catalog with facility-branded shopping experience. Residents browse and select items through intuitive tablet interface.',
     color: '#4ade80',
-    sectionId: 'shopping-showcase',
+    sectionId: 'shopping',
     benefits: ['Revenue Generation', 'Resident Independence', 'No Inventory Management']
   },
   {
@@ -26,7 +28,7 @@ const features = [
     title: 'Family Wallet',
     desc: 'Families control spending with digital wallets. Set budgets, monitor purchases, and manage funds securely for their loved ones.',
     color: '#86efac',
-    sectionId: 'shopping-showcase',
+    sectionId: 'shopping',
     benefits: ['Budget Control', 'Secure Transactions', 'Family Oversight']
   },
   {
@@ -34,7 +36,7 @@ const features = [
     title: 'Flexible Delivery',
     desc: 'Instacart for local items, Amazon for everything else. Facility verifies and distributes orders. No inventory management needed.',
     color: '#bbf7d0',
-    sectionId: 'shopping-showcase',
+    sectionId: 'shopping',
     benefits: ['Multiple Options', 'No Storage Needed', 'Reliable Delivery']
   },
   {
@@ -42,7 +44,7 @@ const features = [
     title: 'Senior Games Lounge',
     desc: 'Cognitive games designed specifically for seniors. Memory training, puzzle solving, and social gaming to keep minds active.',
     color: '#dcfce7',
-    sectionId: 'games-section',
+    sectionId: 'games',
     benefits: ['Cognitive Health', 'Social Engagement', 'Entertainment']
   },
   {
@@ -50,7 +52,7 @@ const features = [
     title: 'Memory Training',
     desc: 'Specialized games and activities to improve memory, attention, and cognitive function. Track progress over time.',
     color: '#fef3c7',
-    sectionId: 'games-section',
+    sectionId: 'games',
     benefits: ['Memory Improvement', 'Progress Tracking', 'Brain Health']
   },
   {
@@ -58,7 +60,7 @@ const features = [
     title: 'Family Connection',
     desc: 'Video chat, photo sharing, and family updates. Keep families connected and involved in their loved ones daily life.',
     color: '#fecaca',
-    sectionId: 'family-engagement',
+    sectionId: 'family',
     benefits: ['Video Chat', 'Photo Sharing', 'Family Updates']
   },
   {
@@ -66,7 +68,7 @@ const features = [
     title: 'Caregiver Tools',
     desc: 'Medical reminders, health monitoring, and communication tools for caregivers to provide better care.',
     color: '#fbbf24',
-    sectionId: 'family-engagement',
+    sectionId: 'family',
     benefits: ['Medical Reminders', 'Health Monitoring', 'Care Coordination']
   },
   {
@@ -74,8 +76,24 @@ const features = [
     title: 'Independent Shopping',
     desc: 'Residents shop independently or with caregiver assistance. Easy-to-use interface with large buttons and clear product images.',
     color: '#a78bfa',
-    sectionId: 'shopping-showcase',
+    sectionId: 'shopping',
     benefits: ['User-Friendly', 'Accessibility', 'Independence']
+  },
+  {
+    icon: faTv,
+    title: 'Entertainment Channel',
+    desc: 'White-label video streaming for facilities with hardware bundle. Custom channel branding, live streams, and local content library.',
+    color: '#f97316',
+    sectionId: 'entertainment-channel',
+    benefits: ['Revenue Generation', 'Resident Engagement', 'Custom Branding']
+  },
+  {
+    icon: faPaw,
+    title: 'KindPaws™ Virtual Pet',
+    desc: 'Digital companionship that feels real. Virtual pets provide emotional support, daily engagement, and social connection for residents.',
+    color: '#ec4899',
+    sectionId: 'kindpaws',
+    benefits: ['Emotional Support', 'Daily Engagement', 'Social Connection']
   },
 ];
 
@@ -100,7 +118,7 @@ const FeaturesSection: React.FC = () => {
           letterSpacing: 0.5,
           fontSize: { xs: '2rem', md: '3rem' }
         }}>
-          Complete LifeCart Experience
+          The Stevinova LifeSuite
         </Typography>
         <Typography variant="h6" align="center" sx={{ 
           color: '#bbb', 
@@ -109,7 +127,7 @@ const FeaturesSection: React.FC = () => {
           mx: 'auto',
           fontSize: { xs: '1rem', md: '1.25rem' }
         }}>
-          Everything your facility needs to enhance resident care, generate revenue, and keep families connected
+          Everything your community needs to enrich lives, foster connection, and run effortlessly.
         </Typography>
         
         <Box sx={{ 
