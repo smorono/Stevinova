@@ -13,7 +13,8 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  IconButton
+  IconButton,
+  Tooltip
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -64,6 +65,54 @@ const KindPawsSection: React.FC = () => {
   return (
     <Box id="kindpaws" sx={{ bgcolor: 'background.default', py: 12 }}>
       <Container maxWidth="lg">
+        {/* KindPaws Icon */}
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <Tooltip title="Back to Features section" arrow>
+            <div 
+              onClick={() => {
+                const element = document.getElementById('features');
+                if (element) {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
+              style={{ 
+                display: 'inline-flex', 
+                background: 'linear-gradient(135deg, #ec489920, #ec489940)', 
+                border: '3px solid #ec489960', 
+                borderRadius: '50%', 
+                width: 80, 
+                height: 80, 
+                alignItems: 'center', 
+              justifyContent: 'center',
+              marginBottom: 16,
+              boxShadow: '0 4px 12px rgba(236, 72, 153, 0.3)',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(236, 72, 153, 0.5)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(236, 72, 153, 0.3)';
+            }}
+          >
+            <FontAwesomeIcon 
+              icon={faPaw} 
+              size="2x" 
+              style={{ 
+                color: '#ec4899',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+              }} 
+            />
+          </div>
+        </Tooltip>
+      </div>
+        
         {/* Header */}
         <Box sx={{ textAlign: 'center', mb: 8 }}>
           <Typography variant="h2" sx={{ 
@@ -72,7 +121,7 @@ const KindPawsSection: React.FC = () => {
             mb: 3,
             fontSize: { xs: '2.5rem', md: '3.5rem' }
           }}>
-            KindPaws™ by Stevinova
+            KindPaws® by Stevinova
           </Typography>
           <Typography variant="h5" sx={{ 
             color: '#4ade80', 
@@ -116,7 +165,7 @@ const KindPawsSection: React.FC = () => {
               fontSize: '1.1rem',
               lineHeight: 1.7
             }}>
-              Bring the emotional benefits of pet ownership into the digital world. KindPaws™ gives every resident a chance to bond with a loving virtual friend—without the noise, mess, or stress. From soft barks to encouraging nudges, KindPaws™ fosters joy, comfort, and connection in daily life.
+              Bring the emotional benefits of pet ownership into the digital world. KindPaws® gives every resident a chance to bond with a loving virtual friend—without the noise, mess, or stress. From soft barks to encouraging nudges, KindPaws® fosters joy, comfort, and connection in daily life.
             </Typography>
 
             {/* Benefits Grid */}
@@ -369,7 +418,7 @@ const KindPawsSection: React.FC = () => {
           justifyContent: 'space-between'
         }}>
           <Typography variant="h5" sx={{ fontWeight: 700 }}>
-            KindPaws™ Demo
+            KindPaws® Demo
           </Typography>
           <IconButton
             onClick={() => setShowDemo(false)}
@@ -385,7 +434,7 @@ const KindPawsSection: React.FC = () => {
           textAlign: 'center'
         }}>
           <Typography variant="body1" sx={{ color: '#bbb', mb: 4 }}>
-            Experience the joy of virtual pet companionship. Try interacting with your KindPaws™ pet!
+                          Experience the joy of virtual pet companionship. Try interacting with your KindPaws® pet!
           </Typography>
           <KindPawsPetWidget />
         </DialogContent>

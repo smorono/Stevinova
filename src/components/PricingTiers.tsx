@@ -7,7 +7,7 @@ const plans = [
   {
     name: 'Starter Facility',
     price: '$99/mo',
-    features: ['LifeCart™', 'Family Connect'],
+          features: ['LifeCart®', 'Family Connect'],
     highlight: false,
     icon: <FontAwesomeIcon icon={faCheckCircle} size="lg" color="#7e29ff" />,
   },
@@ -28,7 +28,7 @@ const plans = [
 ];
 
 const featuresList = [
-  { label: 'LifeCart™', values: ['✔️', '✔️', '✔️'] },
+      { label: 'LifeCart®', values: ['✔️', '✔️', '✔️'] },
   { label: 'Family Connect', values: ['✔️', '✔️', '✔️'] },
   { label: 'Senior Games Lounge', values: ['', '✔️ (5 games)', '✔️ (all games)'] },
   { label: 'Virtual Pet Companion', values: ['', '✔️', '✔️'] },
@@ -40,7 +40,7 @@ const PricingTiers: React.FC = () => {
   return (
     <Box sx={{ my: 8 }}>
       <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-        Stevinova Membership Plans
+        Stevinova® Membership Plans
       </Typography>
       <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
         <Button

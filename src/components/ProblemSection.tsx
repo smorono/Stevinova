@@ -25,7 +25,7 @@ const problems = [
 const ProblemSection: React.FC = () => (
   <Box sx={{ my: 8 }}>
     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-      Why Stevinova Matters for Your Facility
+      Why Stevinova® Matters for Your Facility
     </Typography>
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 4, justifyContent: 'center' }}>
       {problems.map((p, i) => (

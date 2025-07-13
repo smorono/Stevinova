@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box, Typography, Card, CardContent, Button, Chip, Avatar, Container } from '@mui/material';
+import { Box, Typography, Card, CardContent, Button, Chip, Avatar, Container, Tooltip } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle, faStar, faCrown } from '@fortawesome/free-solid-svg-icons';
+import { faCheckCircle, faStar, faCrown, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
 const plans = [
   {
@@ -24,7 +24,7 @@ const plans = [
     features: [
       'Everything in Starter',
       'Senior Games Lounge (10+ games)',
-      'KindPaws™ Virtual Pet',
+      'KindPaws® Virtual Pet',
       'Advanced Family Tools',
       'Priority Support',
       'Up to 150 residents'
@@ -67,6 +67,54 @@ const hardwareAddOn = {
 const PricingSection: React.FC = () => (
   <Box id="pricing" sx={{ bgcolor: 'background.default', py: 10 }}>
     <Container maxWidth="lg">
+      {/* Pricing Icon */}
+      <div style={{ textAlign: 'center', marginBottom: 20 }}>
+        <Tooltip title="Back to Features section" arrow>
+          <div 
+            onClick={() => {
+              const element = document.getElementById('features');
+              if (element) {
+                element.scrollIntoView({ 
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }}
+            style={{ 
+              display: 'inline-flex', 
+              background: 'linear-gradient(135deg, #4ade8020, #4ade8040)', 
+              border: '3px solid #4ade8060', 
+              borderRadius: '50%', 
+              width: 80, 
+              height: 80, 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              marginBottom: 16,
+              boxShadow: '0 4px 12px rgba(74, 222, 128, 0.3)',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(74, 222, 128, 0.5)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(74, 222, 128, 0.3)';
+            }}
+          >
+            <FontAwesomeIcon 
+              icon={faDollarSign} 
+              size="2x" 
+              style={{ 
+                color: '#4ade80',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+              }} 
+            />
+          </div>
+        </Tooltip>
+      </div>
+      
       <Typography variant="h4" align="center" sx={{ color: '#fff', fontWeight: 800, mb: 6, letterSpacing: 0.5 }}>
         Simple, Transparent Pricing
       </Typography>

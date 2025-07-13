@@ -34,7 +34,7 @@ const timeline = [
 const LifeCartDeepDive: React.FC = () => (
   <section className="section-padding bg-stevinova-peach-50">
     <div className="container-max">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-stevinova-peach-700 mb-8 text-center">LifeCart™ — The Virtual Store for Seniors</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-stevinova-peach-700 mb-8 text-center">LifeCart® — The Virtual Store for Seniors</h2>
       {/* Solution Icons */}
       <div className="flex flex-wrap justify-center gap-6 mb-12">
         {solution.map((s, i) => (

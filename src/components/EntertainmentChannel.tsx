@@ -11,7 +11,8 @@ import {
   IconButton,
   Tabs,
   Tab,
-  Paper
+  Paper,
+  Tooltip
 } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -29,7 +30,8 @@ import {
   faStar,
   faCog,
   faUpload,
-  faSearch
+  faSearch,
+  faTv
 } from '@fortawesome/free-solid-svg-icons';
 
 // Mock data for demonstration
@@ -199,6 +201,54 @@ const EntertainmentChannel: React.FC = () => {
   return (
     <Box id="entertainment-channel" sx={{ bgcolor: 'background.default', py: 8 }}>
       <Container maxWidth="lg">
+        {/* Entertainment Channel Icon */}
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <Tooltip title="Back to Features section" arrow>
+            <div 
+              onClick={() => {
+                const element = document.getElementById('features');
+                if (element) {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
+              style={{ 
+                display: 'inline-flex', 
+                background: 'linear-gradient(135deg, #f9731620, #f9731640)', 
+                border: '3px solid #f9731660', 
+                borderRadius: '50%', 
+                width: 80, 
+                height: 80, 
+                alignItems: 'center', 
+                justifyContent: 'center',
+                marginBottom: 16,
+                boxShadow: '0 4px 12px rgba(249, 115, 22, 0.3)',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.boxShadow = '0 6px 20px rgba(249, 115, 22, 0.5)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(249, 115, 22, 0.3)';
+            }}
+          >
+            <FontAwesomeIcon 
+              icon={faTv} 
+              size="2x" 
+              style={{ 
+                color: '#f97316',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))'
+              }} 
+            />
+          </div>
+        </Tooltip>
+      </div>
+        
         {/* Channel Header */}
         <Box sx={{ 
           display: 'flex', 

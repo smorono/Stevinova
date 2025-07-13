@@ -7,7 +7,7 @@ import { BusinessCenter } from '@mui/icons-material';
 const features = [
   {
     icon: <FontAwesomeIcon icon={faCartShopping} size="2x" color="#7e29ff" />,
-    title: 'LifeCart™',
+    title: 'LifeCart®',
     desc: 'Virtual store for residents. Tablet-based shopping. Family wallet and Instacart delivery. Facility earns margin, no inventory.'
   },
   {
@@ -30,7 +30,7 @@ const features = [
 const OverviewSection: React.FC = () => (
   <Box sx={{ my: 8 }}>
     <Typography variant="h4" align="center" sx={{ fontWeight: 700, mb: 4, color: 'primary.main' }}>
-      The Stevinova Advantage
+      The Stevinova® Advantage
     </Typography>
     <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 4, justifyContent: 'center' }}>
       {features.map((f, i) => (

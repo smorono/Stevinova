@@ -28,7 +28,7 @@ const features = [
     title: 'Family Wallet',
     desc: 'Families control spending with digital wallets. Set budgets, monitor purchases, and manage funds securely for their loved ones.',
     color: '#86efac',
-    sectionId: 'shopping',
+    sectionId: 'family-wallet-system',
     benefits: ['Budget Control', 'Secure Transactions', 'Family Oversight']
   },
   {
@@ -36,7 +36,7 @@ const features = [
     title: 'Flexible Delivery',
     desc: 'Instacart for local items, Amazon for everything else. Facility verifies and distributes orders. No inventory management needed.',
     color: '#bbf7d0',
-    sectionId: 'shopping',
+    sectionId: 'flexible-delivery',
     benefits: ['Multiple Options', 'No Storage Needed', 'Reliable Delivery']
   },
   {
@@ -52,7 +52,7 @@ const features = [
     title: 'Memory Training',
     desc: 'Specialized games and activities to improve memory, attention, and cognitive function. Track progress over time.',
     color: '#fef3c7',
-    sectionId: 'games',
+    sectionId: 'memory-training',
     benefits: ['Memory Improvement', 'Progress Tracking', 'Brain Health']
   },
   {
@@ -60,7 +60,7 @@ const features = [
     title: 'Family Connection',
     desc: 'Video chat, photo sharing, and family updates. Keep families connected and involved in their loved ones daily life.',
     color: '#fecaca',
-    sectionId: 'family',
+    sectionId: 'family-connection',
     benefits: ['Video Chat', 'Photo Sharing', 'Family Updates']
   },
   {
@@ -68,7 +68,7 @@ const features = [
     title: 'Caregiver Tools',
     desc: 'Medical reminders, health monitoring, and communication tools for caregivers to provide better care.',
     color: '#fbbf24',
-    sectionId: 'family',
+    sectionId: 'caregiver-tools',
     benefits: ['Medical Reminders', 'Health Monitoring', 'Care Coordination']
   },
   {
@@ -76,7 +76,7 @@ const features = [
     title: 'Independent Shopping',
     desc: 'Residents shop independently or with caregiver assistance. Easy-to-use interface with large buttons and clear product images.',
     color: '#a78bfa',
-    sectionId: 'shopping',
+    sectionId: 'independent-shopping',
     benefits: ['User-Friendly', 'Accessibility', 'Independence']
   },
   {
@@ -89,7 +89,7 @@ const features = [
   },
   {
     icon: faPaw,
-    title: 'KindPaws™ Virtual Pet',
+    title: 'KindPaws® Virtual Pet',
     desc: 'Digital companionship that feels real. Virtual pets provide emotional support, daily engagement, and social connection for residents.',
     color: '#ec4899',
     sectionId: 'kindpaws',
@@ -97,7 +97,11 @@ const features = [
   },
 ];
 
-const FeaturesSection: React.FC = () => {
+type FeaturesSectionProps = {
+  onSmartShoppingClick?: () => void;
+};
+
+const FeaturesSection: React.FC<FeaturesSectionProps> = ({ onSmartShoppingClick }) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -118,7 +122,7 @@ const FeaturesSection: React.FC = () => {
           letterSpacing: 0.5,
           fontSize: { xs: '2rem', md: '3rem' }
         }}>
-          The Stevinova LifeSuite
+          The Stevinova® LifeSuite
         </Typography>
         <Typography variant="h6" align="center" sx={{ 
           color: '#bbb', 
@@ -168,7 +172,13 @@ const FeaturesSection: React.FC = () => {
                   }
                 } 
               }}
-              onClick={() => scrollToSection(feature.sectionId)}
+              onClick={() => {
+                if (feature.title === 'Smart Shopping' && onSmartShoppingClick) {
+                  onSmartShoppingClick();
+                } else {
+                  scrollToSection(feature.sectionId);
+                }
+              }}
               >
                 {/* Hover overlay */}
                 <Box className="feature-overlay" sx={{

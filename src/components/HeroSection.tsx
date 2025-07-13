@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, Button, Container, Stack } from '@mui/material';
+import { Box, Typography, Button, Container, Stack, Tooltip } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStore, faChartLine } from '@fortawesome/free-solid-svg-icons';
 
@@ -43,15 +43,33 @@ const HeroSection: React.FC = () => (
           Your Facility's Digital Store
         </Typography>
         <Typography variant="h6" sx={{ color: '#bbb', fontWeight: 400, fontSize: { xs: 16, md: 18 }, mb: 2 }}>
-          Stevinova™ transforms your care facility into a digital marketplace. Residents shop independently, families control budgets, and you earn revenue—all without inventory management.
+          Stevinova® transforms your care facility into a digital marketplace. Residents shop independently, families control budgets, and you earn revenue—all without inventory management.
         </Typography>
         <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} justifyContent="center">
-          <Button variant="contained" color="secondary" size="large" sx={{ fontWeight: 700, borderRadius: 2, px: 4, boxShadow: 2, bgcolor: '#4ade80', color: '#000', '&:hover': { bgcolor: '#86efac', transform: 'translateY(-2px)' } }}>
-            See How It Works
-          </Button>
-          <Button variant="outlined" color="secondary" size="large" sx={{ fontWeight: 700, borderRadius: 2, px: 4, borderColor: '#4ade80', color: '#4ade80', '&:hover': { borderColor: '#86efac', bgcolor: '#23263a', color: '#86efac' } }}>
-            View Pricing
-          </Button>
+          <Tooltip title="Scroll to How It Works section" arrow>
+            <Button variant="contained" color="secondary" size="large" sx={{ fontWeight: 700, borderRadius: 2, px: 4, boxShadow: 2, bgcolor: '#4ade80', color: '#000', '&:hover': { bgcolor: '#86efac', transform: 'translateY(-2px)' } }}>
+              See How It Works
+            </Button>
+          </Tooltip>
+          <Tooltip title="Scroll to Pricing section" arrow>
+            <Button 
+              variant="outlined" 
+              color="secondary" 
+              size="large" 
+              onClick={() => {
+                const element = document.getElementById('pricing');
+                if (element) {
+                  element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
+              sx={{ fontWeight: 700, borderRadius: 2, px: 4, borderColor: '#4ade80', color: '#4ade80', '&:hover': { borderColor: '#86efac', bgcolor: '#23263a', color: '#86efac' } }}
+            >
+              View Pricing
+            </Button>
+          </Tooltip>
         </Stack>
         <Box sx={{ mt: 2 }}>
           <Typography variant="subtitle2" sx={{ color: '#bbb', fontSize: 15 }}>

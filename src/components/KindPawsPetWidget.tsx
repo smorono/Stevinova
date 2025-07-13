@@ -372,7 +372,7 @@ const KindPawsPetWidget: React.FC = () => {
           color: '#fff',
           borderBottom: '1px solid #444'
         }}>
-          KindPaws™ Settings
+                      KindPaws® Settings
         </DialogTitle>
         <DialogContent sx={{ bgcolor: '#23263a', color: '#fff', pt: 3 }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
